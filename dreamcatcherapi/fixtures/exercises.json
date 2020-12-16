@@ -1,0 +1,106 @@
+[{
+    "model": "dreamcatcherapi.exercise",
+    "pk": 1,
+    "fields": {
+      "exercise_type": "lobortis vel dapibus at diam",
+      "duration": 39
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 2,
+    "fields": {
+      "exercise_type": "ligula vehicula consequat morbi a",
+      "duration": 59
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 3,
+    "fields": {
+      "exercise_type": "dui vel nisl duis",
+      "duration": 175
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 4,
+    "fields": {
+      "exercise_type": "ornare",
+      "duration": 106
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 5,
+    "fields": {
+      "exercise_type": "dolor vel",
+      "duration": 200
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 6,
+    "fields": {
+      "exercise_type": "eleifend",
+      "duration": 208
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 7,
+    "fields": {
+      "exercise_type": "rhoncus aliquet pulvinar sed nisl",
+      "duration": 197
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 8,
+    "fields": {
+      "exercise_type": "rutrum neque aenean auctor gravida",
+      "duration": 176
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 9,
+    "fields": {
+      "exercise_type": "felis fusce posuere felis",
+      "duration": 77
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 10,
+    "fields": {
+      "exercise_type": "volutpat",
+      "duration": 170
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 11,
+    "fields": {
+      "exercise_type": "non",
+      "duration": 65
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 12,
+    "fields": {
+      "exercise_type": "nam dui proin",
+      "duration": 23
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 13,
+    "fields": {
+      "exercise_type": "ante ipsum primis",
+      "duration": 183
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 14,
+    "fields": {
+      "exercise_type": "aliquam lacus morbi",
+      "duration": 10
+    }
+  }, {
+    "model": "dreamcatcherapi.exercise",
+    "pk": 15,
+    "fields": {
+      "exercise_type": "fermentum justo",
+      "duration": 188
+    }
+  }]

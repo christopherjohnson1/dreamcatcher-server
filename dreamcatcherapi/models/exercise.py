@@ -6,4 +6,4 @@ class Exercise(models.Model):
     """ model representation of a list of Exercises a user can add to their dream """
 
     exercise_type = models.CharField(max_length=500)
-    duration = models.FloatField()
+    duration = models.IntegerField()
