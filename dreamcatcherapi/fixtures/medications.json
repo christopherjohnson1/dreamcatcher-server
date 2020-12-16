@@ -1,0 +1,91 @@
+[{
+    "model": "dreamcatcherapi.medication",
+    "pk": 1,
+    "fields": {
+      "name": "sed ante"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 2,
+    "fields": {
+      "name": "sapien quis libero"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 3,
+    "fields": {
+      "name": "a suscipit nulla"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 4,
+    "fields": {
+      "name": "augue"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 5,
+    "fields": {
+      "name": "viverra eget"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 6,
+    "fields": {
+      "name": "sociis"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 7,
+    "fields": {
+      "name": "phasellus in felis"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 8,
+    "fields": {
+      "name": "et tempus"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 9,
+    "fields": {
+      "name": "iaculis"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 10,
+    "fields": {
+      "name": "volutpat dui"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 11,
+    "fields": {
+      "name": "quis turpis sed"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 12,
+    "fields": {
+      "name": "ridiculus mus"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 13,
+    "fields": {
+      "name": "risus auctor"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 14,
+    "fields": {
+      "name": "dui proin"
+    }
+  }, {
+    "model": "dreamcatcherapi.medication",
+    "pk": 15,
+    "fields": {
+      "name": "diam cras"
+    }
+  }]

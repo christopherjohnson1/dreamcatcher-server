@@ -1,0 +1,36 @@
+[{
+  "model": "dreamcatcherapi.dreammedication",
+  "pk": 1,
+  "fields": {
+    "dream": 1,
+    "medication": 4
+  }
+}, {
+  "model": "dreamcatcherapi.dreammedication",
+  "pk": 2,
+  "fields": {
+    "dream": 1,
+    "medication": 4
+  }
+}, {
+  "model": "dreamcatcherapi.dreammedication",
+  "pk": 3,
+  "fields": {
+    "dream": 2,
+    "medication": 3
+  }
+}, {
+  "model": "dreamcatcherapi.dreammedication",
+  "pk": 4,
+  "fields": {
+    "dream": 4,
+    "medication": 5
+  }
+}, {
+  "model": "dreamcatcherapi.dreammedication",
+  "pk": 5,
+  "fields": {
+    "dream": 2,
+    "medication": 4
+  }
+}]
