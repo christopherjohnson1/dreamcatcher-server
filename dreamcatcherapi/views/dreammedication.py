@@ -24,21 +24,16 @@ class DreamMedications(ViewSet):
     """ medications to be added to a dream for dreamcatcher """
 
     def create(self, request):
-        """ POST operations for adding a dream """
+        """ POST operations for adding a medication to a dream """
 
-        dream = Dream()
-        dream.user = DreamcatcherUser.objects.get(user=request.auth.user)
-        dream.title = request.data['title']
-        dream.dream_story = request.data['dream_story']
-        dream.private = request.data['private']
-        dream.dream_type = DreamType.objects.get(pk=request.data['dream_type_id'])
-        dream.exercise = Exercise.objects.get(pk=request.data['exercise_id'])
-        dream.stress = Stress.objects.get(pk=request.data['stress_id'])
-        dream.moon_phase = MoonPhase.objects.get(pk=request.data['moon_phase_id'])
+        dreammedication = DreamMedication()
+        dreammedication.dream = Dream.objects.get(pk=request.data['dream_id'])
+        dreammedication.medication = Medication.objects.get(pk=request.data['medication_id'])
+        
 
         try:
-            dream.save()
-            serializer = DreamSerializer(dream, context={'request': request})
+            dreammedication.save()
+            serializer = DreamMedicationSerializer(dreammedication, context={'request': request})
 
             return Response(serializer.data)
 
@@ -46,12 +41,12 @@ class DreamMedications(ViewSet):
             return Response({'reason': ex.message}, status=status.HTTP_400_BAD_REQUEST)
 
     def retrieve(self, request, pk=None):
-        """ get a single dream """
+        """ get a single dream medication """
 
         try:
-            dream = Dream.objects.get(pk=pk)
+            dreammedication = DreamMedication.objects.get(pk=pk)
 
-            serializer = DreamSerializer(dream, context={'request': request})
+            serializer = DreamMedicationSerializer(dreammedication, context={'request': request})
             return Response(serializer.data)
         except Exception as ex:
             return HttpResponseServerError(ex)
@@ -67,18 +62,12 @@ class DreamMedications(ViewSet):
     def update(self, request, pk=None):
         """ update/ edit an existing dream """
 
-        dream = Dream.objects.get(pk=pk)
+        dreammedication = DreamMedication.objects.get(pk=pk)
 
-        dream.user = DreamcatcherUser.objects.get(user=request.auth.user)
-        dream.title = request.data['title']
-        dream.dream_story = request.data['dream_story']
-        dream.private = request.data['private']
-        dream.dream_type = DreamType.objects.get(pk=request.data['dream_type_id'])
-        dream.exercise = Exercise.objects.get(pk=request.data['exercise_id'])
-        dream.stress = Stress.objects.get(pk=request.data['stress_id'])
-        dream.moon_phase = MoonPhase.objects.get(pk=request.data['moon_phase_id'])
+        dreammedication.dream = Dream.objects.get(pk=request.data['dream_id'])
+        dreammedication.medication = Medication.objects.get(pk=request.data['medication_id'])
 
-        dream.save()
+        dreammedication.save()
 
         return Response({}, status=status.HTTP_204_NO_CONTENT)
 
@@ -86,13 +75,13 @@ class DreamMedications(ViewSet):
         """ deletes an existing dream """
 
         try:
-            dream = Dream.objects.get(pk=pk)
+            dreammedication = DreamMedication.objects.get(pk=pk)
 
-            dream.delete()
+            dreammedication.delete()
 
             return Response({}, status=status.HTTP_204_NO_CONTENT)
 
-        except Dream.DoesNotExist as ex:
+        except DreamMedication.DoesNotExist as ex:
             return Response({'mesage': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as ex:
