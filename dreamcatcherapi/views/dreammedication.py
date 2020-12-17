@@ -4,17 +4,24 @@ from rest_framework import status
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from dreamcatcherapi.models import Dream, DreamcatcherUser, DreamType, Exercise, Stress, MoonPhase
+from dreamcatcherapi.models import Dream, Medication, DreamMedication
 
-class DreamSerializer(serializers.ModelSerializer):
+class MedicationSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Dream
-        fields = ('id', 'user_id', 'title', 'dream_story', 'date', 'private', 'dream_type_id', 'exercise_id', 'stress_id', 'moon_phase_id')
+        model = Medication
+        fields = ('id', 'name')
+
+class DreamMedicationSerializer(serializers.ModelSerializer):
+    medication = MedicationSerializer(many=False)
+
+    class Meta:
+        model = DreamMedication
+        fields = ('id', 'dream_id', 'medication_id', 'medication')
         depth = 1
 
-class Dreams(ViewSet):
-    """ comments for dreamcatcher """
+class DreamMedications(ViewSet):
+    """ medications to be added to a dream for dreamcatcher """
 
     def create(self, request):
         """ POST operations for adding a dream """
@@ -50,10 +57,10 @@ class Dreams(ViewSet):
             return HttpResponseServerError(ex)
 
     def list(self, request):
-        "GET all dreams"
-        dreams = Dream.objects.all()
+        "GET all dream medications"
+        dreammedications = DreamMedication.objects.all()
         
-        serializer = DreamSerializer(dreams, many=True, context={'request': request})
+        serializer = DreamMedicationSerializer(dreammedications, many=True, context={'request': request})
 
         return Response(serializer.data)
 
