@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 from rest_framework import routers
-from dreamcatcherapi.views import Comments, Dreams, DreamCatcherUsers, DreamMedications, DreamTypes
+from dreamcatcherapi.views import Comments, Dreams, DreamCatcherUsers, DreamMedications, DreamTypes, Exercises
 from django.conf.urls import include
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -23,7 +23,8 @@ router.register(r'comments', Comments, 'comment')
 router.register(r'dreams', Dreams, 'dream')
 router.register(r'dreamcatcherusers', DreamCatcherUsers, 'dreamcatcheruser')
 router.register(r'dreammedications', DreamMedications, 'dreammedication')
-router.register(r'dreamtypes', DreamTypes, 'dreamtypes')
+router.register(r'dreamtypes', DreamTypes, 'dreamtype')
+router.register(r'exercises', Exercises, 'exercise')
 
 urlpatterns = [
     path('', include(router.urls)),
