@@ -13,9 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from dreamcatcherapi.views.medication import Medications
 from django.urls import path
 from rest_framework import routers
-from dreamcatcherapi.views import Comments, Dreams, DreamCatcherUsers, DreamMedications, DreamTypes, Exercises
+from dreamcatcherapi.views import Comments, Dreams, DreamCatcherUsers, DreamMedications, DreamTypes, Exercises, Medications
 from django.conf.urls import include
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -25,6 +26,7 @@ router.register(r'dreamcatcherusers', DreamCatcherUsers, 'dreamcatcheruser')
 router.register(r'dreammedications', DreamMedications, 'dreammedication')
 router.register(r'dreamtypes', DreamTypes, 'dreamtype')
 router.register(r'exercises', Exercises, 'exercise')
+router.register(r'medications', Medications, 'medication')
 
 urlpatterns = [
     path('', include(router.urls)),
