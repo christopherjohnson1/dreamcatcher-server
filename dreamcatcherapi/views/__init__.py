@@ -7,3 +7,4 @@ from .exercise import Exercises
 from .medication import Medications
 from .moonphase import MoonPhases
 from .stress import StressEvents
+from .auth import register_user, login_user
