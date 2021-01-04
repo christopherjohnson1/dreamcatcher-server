@@ -2,105 +2,105 @@
     "model": "dreamcatcherapi.exercise",
     "pk": 1,
     "fields": {
-      "exercise_type": "lobortis vel dapibus at diam",
+      "exercise_type": "Trail running",
       "duration": 39
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 2,
     "fields": {
-      "exercise_type": "ligula vehicula consequat morbi a",
+      "exercise_type": "Hiking",
       "duration": 59
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 3,
     "fields": {
-      "exercise_type": "dui vel nisl duis",
+      "exercise_type": "Biking",
       "duration": 175
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 4,
     "fields": {
-      "exercise_type": "ornare",
+      "exercise_type": "Weight lifting",
       "duration": 106
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 5,
     "fields": {
-      "exercise_type": "dolor vel",
+      "exercise_type": "Running",
       "duration": 200
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 6,
     "fields": {
-      "exercise_type": "eleifend",
+      "exercise_type": "Walking",
       "duration": 208
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 7,
     "fields": {
-      "exercise_type": "rhoncus aliquet pulvinar sed nisl",
+      "exercise_type": "Rock climbing",
       "duration": 197
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 8,
     "fields": {
-      "exercise_type": "rutrum neque aenean auctor gravida",
+      "exercise_type": "Swimming",
       "duration": 176
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 9,
     "fields": {
-      "exercise_type": "felis fusce posuere felis",
+      "exercise_type": "Yoga",
       "duration": 77
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 10,
     "fields": {
-      "exercise_type": "volutpat",
+      "exercise_type": "Baseball",
       "duration": 170
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 11,
     "fields": {
-      "exercise_type": "non",
+      "exercise_type": "Football",
       "duration": 65
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 12,
     "fields": {
-      "exercise_type": "nam dui proin",
+      "exercise_type": "Soccer",
       "duration": 23
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 13,
     "fields": {
-      "exercise_type": "ante ipsum primis",
+      "exercise_type": "Volleyball",
       "duration": 183
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 14,
     "fields": {
-      "exercise_type": "aliquam lacus morbi",
+      "exercise_type": "Crossfit",
       "duration": 10
     }
   }, {
     "model": "dreamcatcherapi.exercise",
     "pk": 15,
     "fields": {
-      "exercise_type": "fermentum justo",
+      "exercise_type": "MMA",
       "duration": 188
     }
   }]

@@ -2,90 +2,90 @@
     "model": "dreamcatcherapi.dreamtype",
     "pk": 1,
     "fields": {
-      "label": "sollicitudin mi"
+      "label": "Normal dream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 2,
     "fields": {
-      "label": "felis ut at"
+      "label": "Lucid dream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 3,
     "fields": {
-      "label": "lobortis"
+      "label": "Nightmare"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 4,
     "fields": {
-      "label": "platea"
+      "label": "Night terror"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 5,
     "fields": {
-      "label": "pede"
+      "label": "Sleep paralysis"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 6,
     "fields": {
-      "label": "nulla"
+      "label": "Daydream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 7,
     "fields": {
-      "label": "turpis a"
+      "label": "False awakening"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 8,
     "fields": {
-      "label": "leo pellentesque ultrices"
+      "label": "Healing dream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 9,
     "fields": {
-      "label": "odio elementum"
+      "label": "Prophetic dream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 10,
     "fields": {
-      "label": "sapien placerat ante"
+      "label": "Vivid dream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 11,
     "fields": {
-      "label": "cursus urna ut"
+      "label": "Sexual dream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 12,
     "fields": {
-      "label": "a"
+      "label": "Auditory dream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 13,
     "fields": {
-      "label": "rhoncus mauris enim"
+      "label": "Cosmic dream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 14,
     "fields": {
-      "label": "imperdiet nullam"
+      "label": "Deja Vu dream"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",
     "pk": 15,
     "fields": {
-      "label": "convallis"
+      "label": "Out of body experience"
     }
   }]
