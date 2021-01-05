@@ -17,7 +17,7 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 from dreamcatcherapi.views import Comments, Dreams, DreamCatcherUsers, DreamMedications, DreamTypes
-from dreamcatcherapi.views import Exercises, Medications, MoonPhases, StressEvents
+from dreamcatcherapi.views import Exercises, Medications, MoonPhases, StressEvents, Profiles
 from dreamcatcherapi.views import login_user, register_user
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -29,6 +29,7 @@ router.register(r'dreamtypes', DreamTypes, 'dreamtype')
 router.register(r'exercises', Exercises, 'exercise')
 router.register(r'medications', Medications, 'medication')
 router.register(r'moonphases', MoonPhases, 'moonphase')
+router.register(r'profile', Profiles, 'profile')
 router.register(r'stressevents', StressEvents, 'stressevent')
 
 urlpatterns = [

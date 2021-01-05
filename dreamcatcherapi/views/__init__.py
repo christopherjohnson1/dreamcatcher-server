@@ -8,3 +8,4 @@ from .medication import Medications
 from .moonphase import MoonPhases
 from .stress import StressEvents
 from .auth import register_user, login_user
+from .profile import Profiles
