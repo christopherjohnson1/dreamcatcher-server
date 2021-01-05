@@ -5,12 +5,36 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from dreamcatcherapi.models import Dream, DreamcatcherUser, DreamType, Exercise, Stress, MoonPhase
+from django.contrib.auth.models import User
 
+
+class UserSerializer(serializers.ModelSerializer):
+    """ JSON serializer for user """
+    class Meta:
+        model = User
+        fields = ('id', 'first_name', 'last_name', 'username')
+
+class DreamcatcherUserSerializer(serializers.ModelSerializer):
+    """ JSON Serializer for user """
+    user = UserSerializer(serializers.ModelSerializer)
+    class Meta:
+        model = DreamcatcherUser
+        fields = ('id', 'user', 'full_name')
+
+class DreamTypeSerializer(serializers.ModelSerializer):
+    """ JSON Serializer for dream type """
+    user = UserSerializer(serializers.ModelSerializer)
+    class Meta:
+        model = DreamType
+        fields = ('id', 'label')
 class DreamSerializer(serializers.ModelSerializer):
+    """ JSON Serializer for dreams """
+    user = DreamcatcherUserSerializer(many=False)
+    dream_type = DreamTypeSerializer
 
     class Meta:
         model = Dream
-        fields = ('id', 'user_id', 'title', 'dream_story', 'date', 'private', 'dream_type_id', 'exercise_id', 'stress_id', 'moon_phase_id')
+        fields = ('id', 'user', 'user_id', 'title', 'dream_story', 'date', 'private', 'dream_type_id', 'exercise_id', 'stress_id', 'moon_phase_id', 'dream_type')
         depth = 1
 
 class Dreams(ViewSet):
@@ -52,6 +76,10 @@ class Dreams(ViewSet):
     def list(self, request):
         "GET all dreams"
         dreams = Dream.objects.all()
+
+        user_id = self.request.query_params.get('user_id', None)
+        if user_id is not None:
+            dreams = dreams.filter(user_id=user_id)
         
         serializer = DreamSerializer(dreams, many=True, context={'request': request})
 
