@@ -5,12 +5,28 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from dreamcatcherapi.models import Dream, DreamcatcherUser, DreamType, Exercise, Stress, MoonPhase
+from django.contrib.auth.models import User
 
+
+class UserSerializer(serializers.ModelSerializer):
+    """ JSON serializer for user """
+    class Meta:
+        model = User
+        fields = ('id', 'first_name', 'last_name', 'username')
+
+class DreamcatcherUserSerializer(serializers.ModelSerializer):
+    """ JSON Serializer for user """
+    user = UserSerializer(serializers.ModelSerializer)
+    class Meta:
+        model = DreamcatcherUser
+        fields = ('id', 'user')
 class DreamSerializer(serializers.ModelSerializer):
+    """ JSON Serializer for dreams """
+    user = DreamcatcherUserSerializer(many=False)
 
     class Meta:
         model = Dream
-        fields = ('id', 'user_id', 'title', 'dream_story', 'date', 'private', 'dream_type_id', 'exercise_id', 'stress_id', 'moon_phase_id')
+        fields = ('id', 'user', 'user_id', 'title', 'dream_story', 'date', 'private', 'dream_type_id', 'exercise_id', 'stress_id', 'moon_phase_id')
         depth = 1
 
 class Dreams(ViewSet):
