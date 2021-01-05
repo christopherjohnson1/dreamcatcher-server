@@ -52,6 +52,10 @@ class Dreams(ViewSet):
     def list(self, request):
         "GET all dreams"
         dreams = Dream.objects.all()
+
+        user_id = self.request.query_params.get('user_id', None)
+        if user_id is not None:
+            dreams = dreams.filter(user_id=user_id)
         
         serializer = DreamSerializer(dreams, many=True, context={'request': request})
 
