@@ -19,14 +19,22 @@ class DreamcatcherUserSerializer(serializers.ModelSerializer):
     user = UserSerializer(serializers.ModelSerializer)
     class Meta:
         model = DreamcatcherUser
-        fields = ('id', 'user')
+        fields = ('id', 'user', 'full_name')
+
+class DreamTypeSerializer(serializers.ModelSerializer):
+    """ JSON Serializer for dream type """
+    user = UserSerializer(serializers.ModelSerializer)
+    class Meta:
+        model = DreamType
+        fields = ('id', 'label')
 class DreamSerializer(serializers.ModelSerializer):
     """ JSON Serializer for dreams """
     user = DreamcatcherUserSerializer(many=False)
+    dream_type = DreamTypeSerializer
 
     class Meta:
         model = Dream
-        fields = ('id', 'user', 'user_id', 'title', 'dream_story', 'date', 'private', 'dream_type_id', 'exercise_id', 'stress_id', 'moon_phase_id')
+        fields = ('id', 'user', 'user_id', 'title', 'dream_story', 'date', 'private', 'dream_type_id', 'exercise_id', 'stress_id', 'moon_phase_id', 'dream_type')
         depth = 1
 
 class Dreams(ViewSet):

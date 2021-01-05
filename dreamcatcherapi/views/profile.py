@@ -47,4 +47,4 @@ class DreamcatcherUserSerializer(serializers.ModelSerializer):
     user = ProfileSerializer(serializers.ModelSerializer)
     class Meta:
         model = DreamcatcherUser
-        fields = ('id', 'user', 'bio', 'profile_photo')
+        fields = ('id', 'user', 'bio', 'profile_photo', 'full_name')
