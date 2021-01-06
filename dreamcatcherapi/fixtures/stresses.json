@@ -2,7 +2,7 @@
     "model": "dreamcatcherapi.stress",
     "pk": 1,
     "fields": {
-      "stress_event": "Financial, money issues"
+      "stress_event": "None"
     }
   }, {
     "model": "dreamcatcherapi.stress",
@@ -44,7 +44,7 @@
     "model": "dreamcatcherapi.stress",
     "pk": 8,
     "fields": {
-      "stress_event": "Death of a loved one"
+      "stress_event": "Financial, money issues"
     }
   }, {
     "model": "dreamcatcherapi.stress",

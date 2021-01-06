@@ -20,7 +20,7 @@
     "model": "dreamcatcherapi.dreamtype",
     "pk": 4,
     "fields": {
-      "label": "Night terror"
+      "label": "Not sure"
     }
   }, {
     "model": "dreamcatcherapi.dreamtype",

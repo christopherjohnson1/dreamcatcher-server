@@ -1,3 +1,5 @@
+import uuid
+import base64
 from django.contrib.auth.models import User
 from django.http import HttpResponseServerError
 from django.core.exceptions import ValidationError
@@ -5,6 +7,7 @@ from rest_framework import status
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
+from django.core.files.base import ContentFile
 from dreamcatcherapi.models import Dream, DreamcatcherUser, DreamType, Exercise, Stress, MoonPhase
 
 class UserSerializer(serializers.ModelSerializer):

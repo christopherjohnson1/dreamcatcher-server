@@ -7,7 +7,7 @@ class DreamcatcherUser(models.Model):
     """ Model representation of a dreamcatcher user account that can be created """
 
     birthday = models.DateField()
-    profile_photo = models.URLField()
+    profile_photo = models.ImageField(upload_to='images/avatars')
     bio = models.CharField(max_length=250)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 

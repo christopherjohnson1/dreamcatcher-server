@@ -2,8 +2,8 @@
     "model": "dreamcatcherapi.exercise",
     "pk": 1,
     "fields": {
-      "exercise_type": "Trail running",
-      "duration": 39
+      "exercise_type": "None",
+      "duration": 0
     }
   }, {
     "model": "dreamcatcherapi.exercise",
@@ -44,7 +44,7 @@
     "model": "dreamcatcherapi.exercise",
     "pk": 7,
     "fields": {
-      "exercise_type": "Rock climbing",
+      "exercise_type": "Trail Running",
       "duration": 197
     }
   }, {

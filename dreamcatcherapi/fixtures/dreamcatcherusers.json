@@ -3,7 +3,7 @@
   "pk": 1,
   "fields": {
     "birthday": "1980-09-04",
-    "profile_photo": "http://dummyimage.com/241x133.jpg/ff4444/ffffff",
+    "profile_photo": "",
     "bio": "pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl",
     "user": 1
   }
@@ -12,7 +12,7 @@
   "pk": 2,
   "fields": {
     "birthday": "1996-10-29",
-    "profile_photo": "http://dummyimage.com/222x140.bmp/cc0000/ffffff",
+    "profile_photo": "",
     "bio": "sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis",
     "user": 2
   }
@@ -21,7 +21,7 @@
   "pk": 3,
   "fields": {
     "birthday": "1996-08-16",
-    "profile_photo": "http://dummyimage.com/247x169.jpg/5fa2dd/ffffff",
+    "profile_photo": "",
     "bio": "sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non",
     "user": 3
   }
@@ -30,7 +30,7 @@
   "pk": 4,
   "fields": {
     "birthday": "1985-12-04",
-    "profile_photo": "http://dummyimage.com/170x169.png/ff4444/ffffff",
+    "profile_photo": "",
     "bio": "justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam",
     "user": 4
   }
@@ -39,7 +39,7 @@
   "pk": 5,
   "fields": {
     "birthday": "1981-04-16",
-    "profile_photo": "http://dummyimage.com/226x159.bmp/ff4444/ffffff",
+    "profile_photo": "",
     "bio": "amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet",
     "user": 5
   }

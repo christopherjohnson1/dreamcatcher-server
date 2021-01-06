@@ -1,3 +1,6 @@
+import uuid
+import base64
+from django.core.files.base import ContentFile
 import json
 from django.http import HttpResponse
 from django.contrib.auth import login, authenticate
@@ -57,11 +60,19 @@ def register_user(request):
         last_name=req_body['last_name']
     )
 
+    profile_photo = None
+
+    if req_body["profile_photo"] is not None:
+                format, imgstr = req_body["profile_photo"].split(';base64,')
+                ext = format.split('/')[-1]
+                data = ContentFile(base64.b64decode(imgstr), name=f'"profile_photo"-{uuid.uuid4()}.{ext}')
+                profile_photo = data
+
     # Now save the extra info in the dreamcatcher_user table
     dreamcatcher_user = DreamcatcherUser.objects.create(
       bio=req_body['bio'],
       user=new_user,
-      profile_photo = req_body['profile_photo'],
+      profile_photo = profile_photo,
       birthday = req_body['birthday'],
       
 
