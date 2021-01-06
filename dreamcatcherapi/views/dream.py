@@ -23,18 +23,37 @@ class DreamcatcherUserSerializer(serializers.ModelSerializer):
 
 class DreamTypeSerializer(serializers.ModelSerializer):
     """ JSON Serializer for dream type """
-    user = UserSerializer(serializers.ModelSerializer)
     class Meta:
         model = DreamType
+        fields = ('id', 'label')
+
+class ExerciseSerializer(serializers.ModelSerializer):
+    """ JSON Serializer for exercise type """
+    class Meta:
+        model = Exercise
+        fields = ('id', 'exercise_type')
+
+class StressSerializer(serializers.ModelSerializer):
+    """ JSON Serializer for Stress type """
+    class Meta:
+        model = Stress
+        fields = ('id', 'stress_event')
+class MoonPhaseSerializer(serializers.ModelSerializer):
+    """ JSON Serializer for moon phase """
+    class Meta:
+        model = MoonPhase
         fields = ('id', 'label')
 class DreamSerializer(serializers.ModelSerializer):
     """ JSON Serializer for dreams """
     user = DreamcatcherUserSerializer(many=False)
     dream_type = DreamTypeSerializer
+    exercise = ExerciseSerializer
+    stress = StressSerializer
+    moon_phase = MoonPhaseSerializer
 
     class Meta:
         model = Dream
-        fields = ('id', 'user', 'user_id', 'title', 'dream_story', 'date', 'private', 'dream_type_id', 'exercise_id', 'stress_id', 'moon_phase_id', 'dream_type')
+        fields = ('id', 'user', 'user_id', 'title', 'dream_story', 'date', 'private', 'dream_type_id', 'exercise_id', 'stress_id', 'moon_phase_id', 'dream_type', 'exercise', 'stress', 'moon_phase')
         depth = 1
 
 class Dreams(ViewSet):
